@@ -1,62 +1,36 @@
 
-# E-Commerce Data Service
+# DE Interview Assignment Solutions
 
-This project sets up a Flask web service designed for an e-commerce platform. It leverages a PostgreSQL database to store and retrieve seller and order data.
+This repository contains solutions to the Data Engineering interview assignments provided. Below are the details of each task and the respective solution directories:
 
-## Getting Started
+## Table of Contents
+1. [Oracle 12c to GCP BigQuery Data Pipeline](#oracle-12c-to-gcp-bigquery-data-pipeline)
+2. [Custom ML Model Deployment on GCP](#custom-ml-model-deployment-on-gcp)
+3. [Python Application for Category-based GMV Analysis](#python-application-for-category-based-gmv-analysis)
+4. [Real-time Event Aggregation for E-commerce](#real-time-event-aggregation-for-e-commerce)
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+---
 
-### Prerequisites
+### Oracle 12c to GCP BigQuery Data Pipeline
+You are asked to construct a data pipeline between on-premise Oracle 12c data warehouse and Google Cloud Platform (GCP) BigQuery data warehouse. The solution primarily utilizes GCP tools and Python scripting. Data integration tools are not used.
+- **Solution Directory**: [assignment1](./n11_case/assignment1/)
 
-- Ensure you have Docker and Docker Compose installed on your system.
-- Clone the project to your local machine.
+---
 
-### Installation
+### Custom ML Model Deployment on GCP
+This task involves deploying a custom ML model data architecture onto GCP. The model will operate online, and the challenge is to establish all the necessary components and a complete pipeline.
+- **Solution Directory**: [assignment2](./n11_case/assignment2/)
 
-1. Clone the project repository:
-```bash
-git clone [repository-url]
-```
+---
 
-2. Navigate to the project directory:
-```bash
-cd [directory-name]
-```
+### Python Application for Category-based GMV Analysis
+The objective is to develop a Python application that satisfies the given requirement: For a particular category, which 5 sellers that aren't designated as key sellers have the highest Gross Merchandise Volume (GMV) in that category?
+- **Solution Directory**: [assignment3](./n11_case/assignment3/)
 
-3. Use Docker Compose to build and start the services:
-```bash
-docker-compose up --build
-```
+---
 
-## Features
+### Real-time Event Aggregation for E-commerce
+The goal is to aggregate continuously generated events in real-time for our e-commerce website. These events, which are all clickstream events, need to be pushed to an associated Kafka topic.
+- **Solution Directory**: [assignment4](./n11_case/assignment4/)
 
-- **Database Setup**: Initializes the PostgreSQL database with tables for sellers and orders.
-- **ETL Process**: Extracts data from JSON files and loads them into the PostgreSQL database.
-- **API Endpoint**: Provides an endpoint to retrieve the top 5 sellers based on Gross Merchandise Value (GMV) for a specific category.
-
-## Usage
-
-Once the services are up, you can access the Flask web service by navigating to:
-```
-http://localhost:1234/top_sellers?cat=[category-id]
-```
-Replace `[category-id]` with the desired category ID to retrieve the top 5 sellers for that category.
-
-## Built With
-
-- **Flask**: Lightweight web application framework.
-- **PostgreSQL**: Open-source relational database.
-- **Docker**: Used for containerization and ensuring consistent environments.
-
-## Contributing
-
-If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcomed.
-
-## License
-
-This project is licensed under the MIT License. See `LICENSE.md` for details.
-
-## Acknowledgments
-
-- Thanks to OpenAI for guidance and code assistance.
+---
