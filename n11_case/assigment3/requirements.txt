@@ -1,0 +1,11 @@
+# This file lists the Python package dependencies required for the project.
+
+# Flask is a lightweight web application framework.
+Flask==2.0.1
+
+# psycopg2-binary is a PostgreSQL adapter for Python.
+psycopg2-binary==2.9.1
+
+# Werkzeug is a comprehensive WSGI web application library.
+# Flask uses it for various purposes including routing.
+Werkzeug==2.0.0

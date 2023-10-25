@@ -1,0 +1,33 @@
+version: '3.8'
+
+# This Docker Compose file is designed to orchestrate two services: a PostgreSQL database and a Flask web application.
+# The database service uses the official PostgreSQL image, while the Flask application is built from a local Dockerfile.
+
+services:
+
+  # Database service configuration.
+  db:
+    # Using the official PostgreSQL version 13 image.
+    image: postgres:13
+    environment:
+      # Setting up the PostgreSQL environment variables.
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: n11db
+    ports:
+      # Exposing and mapping port 5432 of the container to the host.
+      - "5432:5432"
+
+  # Flask web application service configuration.
+  app:
+    build:
+      # Context is set to the current directory, meaning it will use files/folders from here.
+      context: .
+      # Specifying the path to the Dockerfile.
+      dockerfile: ./Dockerfile
+    # Ensuring the app service starts only after the db service is started.
+    depends_on:
+      - db
+    ports:
+      # Exposing and mapping port 1234 of the container to the host.
+      - "1234:1234"

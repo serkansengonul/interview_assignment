@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Event Dashboard</title>
+    <!-- Socket.io client library for real-time communication -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Real-time Event Statistics</h2>
+    <div>
+        <p><strong>Product Views:</strong> <span id="productviewCount">0</span></p>
+        <p><strong>Purchases:</strong> <span id="purchaseCount">0</span></p>
+        <p><strong>Add to Basket:</strong> <span id="addtobasketCount">0</span></p>
+        <p><strong>Remove from Basket:</strong> <span id="removefrombasketCount">0</span></p>
+    </div>
+
+    <script>
+        const socket = io.connect('http://localhost:5002');
+        socket.on('update_stats', function(data) {
+            document.getElementById('productviewCount').innerText = data.productviewCount;
+            document.getElementById('purchaseCount').innerText = data.purchaseCount;
+            document.getElementById('addtobasketCount').innerText = data.addtobasketCount;
+            document.getElementById('removefrombasketCount').innerText = data.removefrombasketCount;
+        });
+    </script>
+</body>
+</html>
