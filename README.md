@@ -13,24 +13,24 @@ This repository contains solutions to the Data Engineering interview assignments
 
 ### Oracle 12c to GCP BigQuery Data Pipeline
 You are asked to construct a data pipeline between on-premise Oracle 12c data warehouse and Google Cloud Platform (GCP) BigQuery data warehouse. The solution primarily utilizes GCP tools and Python scripting. Data integration tools are not used.
-- **Solution Directory**: [assignment1](./assignment1/)
+- **Solution Directory**: [assignment1](./n11_case/assignment1/)
 
 ---
 
 ### Custom ML Model Deployment on GCP
 This task involves deploying a custom ML model data architecture onto GCP. The model will operate online, and the challenge is to establish all the necessary components and a complete pipeline.
-- **Solution Directory**: [assignment2](./assignment2/)
+- **Solution Directory**: [assignment2](./n11_case/assignment2/)
 
 ---
 
 ### Python Application for Category-based GMV Analysis
 The objective is to develop a Python application that satisfies the given requirement: For a particular category, which 5 sellers that aren't designated as key sellers have the highest Gross Merchandise Volume (GMV) in that category?
-- **Solution Directory**: [assignment3](./assignment3/)
+- **Solution Directory**: [assignment3](./n11_case/assignment3/)
 
 ---
 
 ### Real-time Event Aggregation for E-commerce
 The goal is to aggregate continuously generated events in real-time for our e-commerce website. These events, which are all clickstream events, need to be pushed to an associated Kafka topic.
-- **Solution Directory**: [assignment4](./assignment4/)
+- **Solution Directory**: [assignment4](./n11_case/assignment4/)
 
 ---
